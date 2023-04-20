@@ -2,8 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import Link from 'next/link'
-import Map from "../components/Map";
-
+ 
 
 export default function Home() {
   return (
@@ -45,8 +44,8 @@ export default function Home() {
               <h2>623 Hargrove RD E, Tuscalooa AL, 35401</h2>
               <div className={styles.boxImageWrapper}>
              {/* <Map/> */}
-              <iframe className={styles.map} loading="lazy" allowfullscreen 
-                src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ-x8UAs2piIgR_BEpALX8XU4&key={process.env.api_key}">
+              <iframe className={styles.map} loading="lazy" allowFullScreen 
+                src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ-x8UAs2piIgR_BEpALX8XU4&key=${process.env.GOOGLE_MAPS_API_KEY}`}>
               </iframe>
               </div>
               
