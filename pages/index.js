@@ -46,7 +46,7 @@ export default function Home() {
               <div className={styles.boxImageWrapper}>
              {/* <Map/> */}
               <iframe className={styles.map} loading="lazy" allowfullscreen 
-                src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ-x8UAs2piIgR_BEpALX8XU4&key=AIzaSyBhibmawkxlfwNZNZ99xlt0spS808K3ya8">
+                src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ-x8UAs2piIgR_BEpALX8XU4&key={process.env.api_key}">
               </iframe>
               </div>
               
