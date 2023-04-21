@@ -3,6 +3,7 @@ $background-gray: #dadada;
 
 
 .main {
+  width: 100vw;
   min-height: 100vh;
   flex: 1;
   display: flex;
@@ -66,7 +67,6 @@ $background-gray: #dadada;
   height: 35vw;
   display: flex;
   justify-content: center;
-
 }
 
 .boxWrapper {
@@ -193,7 +193,11 @@ $background-gray: #dadada;
 }
 
 @media (max-width: 768px){
-  .gallery .boxWrapper {
+  .imageWrapper {
+    width: 90vw;
+    height: 45vw
+  }
+  .gallery, .boxWrapper {
     flex-direction: column;
     justify-content: center;
   }
@@ -201,6 +205,7 @@ $background-gray: #dadada;
     width: 500px; 
     height: 500px;
   }
+  
 }
 
 @media (max-width: 576px){

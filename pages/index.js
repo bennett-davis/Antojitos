@@ -56,13 +56,8 @@ export default function Home() {
       <Head>
         <title>Antojitos Izcalli</title>
         <meta name="description" content="Antojitos Izcalli" />
-        <style> @import url('https://fonts.googleapis.com/css2?family=Galindo&display=swap');</style>
-        {/* FIXME <link rel="icon" href="/favicon.ico" /> */}
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />      
          
-       
- 
-        </Head>
+      </Head>
 
       <main className={styles.main}>
         <div className={styles.header}>
