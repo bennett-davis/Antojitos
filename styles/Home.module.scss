@@ -13,6 +13,10 @@ $background-gray: #dadada;
   background-color: $background-gray;
 }
 
+.main h1, .main h2 {
+  text-align: center;
+}
+
 .body {
   display: flex;
   flex-direction: column;
@@ -78,7 +82,7 @@ $background-gray: #dadada;
   align-items: center;
   background-color: $primary-color;
   width: 45vw;
-  height: 450px;
+  height: 50vh;
   border-radius: 20px;
 }
 
@@ -90,10 +94,12 @@ $background-gray: #dadada;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: auto;
 }
 
 .box h2 {
   margin: 1rem 0 0 0;
+  text-align: center;
 }
 
 .map {
@@ -107,11 +113,115 @@ $background-gray: #dadada;
   border-radius: 10px;
 }
 
+.reviews {
+  background-color: $background-gray;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  padding: 1rem 1rem;
+  overflow: auto ;
+}
+
+.reviews p {
+  margin: 0;
+  
+}
+
+.reviewTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  height: 30px;
+}
+
+.stars {
+  margin: 0 1rem;
+}
+
+.reviewTitle span {
+  color: $primary-color;
+}
+
 .socialMedia {
   flex-direction: row;
   margin: 3rem;
 }
 
+.gallery {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+
+}
+
+.galleryImageWrapper {
+  position: relative;
+  border-radius: 10px;
+  margin: 1rem;
+  width: 40vw;
+  height: 35vw;
+  display: flex;
+  justify-content: center;
+}
+
 .mediaImage {
   margin: 0 2rem
+}
+
+@media (max-width: 1200px){
+  .boxWrapper {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .box {
+    width: 85vw;
+  }
+  .navbar h1 {
+    margin: 1rem;
+  }
+}
+
+@media (max-width: 992px){
+  .navbar h1 {
+     font-size: 4vw;
+     margin: .3rem;
+  }
+}
+
+@media (max-width: 768px){
+  .gallery .boxWrapper {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .galleryImageWrapper {
+    width: 500px; 
+    height: 500px;
+  }
+}
+
+@media (max-width: 576px){
+  .galleryImageWrapper {
+    width: 400px; 
+    height: 400px;
+  }
+  .box {
+    font-size: small;
+  }
+  .socialMedia{
+    margin: 2rem 1rem
+  }
+}
+
+@media (max-width: 400px){
+  .galleryImageWrapper {
+    width: 300px; 
+    height: 300px;
+  }
+  .box {
+    font-size: small;
+  }
 }
