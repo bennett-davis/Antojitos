@@ -1,6 +1,4 @@
-$primary-color: rgb(255, 135, 49);
-$background-gray: #dadada;
-
+@use 'colors';
 
 .main {
   width: 100vw;
@@ -11,7 +9,11 @@ $background-gray: #dadada;
   justify-content: flex-start;
   align-items: center;
   font-family: 'Galindo', cursive;
-  background-color: $background-gray;
+  background-color: colors.$background-gray;
+}
+
+.navbarActive {
+  color: white;
 }
 
 .main h1, .main h2 {
@@ -25,11 +27,13 @@ $background-gray: #dadada;
 }
 
 .header {
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: $primary-color;
-  align-items: center;
+  align-items: center;  
+  background-color: colors.$primary-color;
+
 }
 
 .navbar {
@@ -38,7 +42,8 @@ $background-gray: #dadada;
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  background-color: colors.$primary-color;
+
 }
 
 .navbar h1 {
@@ -80,7 +85,7 @@ $background-gray: #dadada;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: $primary-color;
+  background-color: colors.$primary-color;
   width: 45vw;
   height: 50vh;
   border-radius: 20px;
@@ -114,7 +119,7 @@ $background-gray: #dadada;
 }
 
 .reviews {
-  background-color: $background-gray;
+  background-color: colors.$background-gray;
   height: 100%;
   width: 100%;
   border-radius: 10px;
@@ -139,7 +144,7 @@ $background-gray: #dadada;
 }
 
 .reviewTitle span {
-  color: $primary-color;
+  color: colors.$primary-color;
 }
 
 .socialMedia {
@@ -181,14 +186,14 @@ $background-gray: #dadada;
     width: 85vw;
   }
   .navbar h1 {
-    margin: 1rem;
+    margin: .7rem;
   }
 }
 
 @media (max-width: 992px){
   .navbar h1 {
-     font-size: 4vw;
-     margin: .3rem;
+     font-size: 3vw;
+     margin: .7rem;
   }
 }
 
@@ -218,6 +223,9 @@ $background-gray: #dadada;
   }
   .socialMedia{
     margin: 2rem 1rem
+  }
+  .navbar h1 {
+    margin: .5rem;
   }
 }
 

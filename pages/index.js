@@ -24,27 +24,27 @@ const reviewList  = [
 
 const galleryList = [
   {
-    imgSrc: "/assets/antojitosFood.jpg",
+    imgSrc: "/assets/food1.jpg",
     alt: "CHANGE ME"
   },
   {
-    imgSrc: "/assets/antojitosFood.jpg",
+    imgSrc: "/assets/food2.jpg",
     alt: "CHANGE ME"
   },
   {
-    imgSrc: "/assets/antojitosFood.jpg",
+    imgSrc: "/assets/food3.jpg",
     alt: "CHANGE ME"
   },
   {
-    imgSrc: "/assets/antojitosFood.jpg",
+    imgSrc: "/assets/food4.jpg",
     alt: "CHANGE ME"
   },
   {
-    imgSrc: "/assets/antojitosFood.jpg",
+    imgSrc: "/assets/food5.jpg",
     alt: "CHANGE ME"
   },
   {
-    imgSrc: "/assets/antojitosFood.jpg",
+    imgSrc: "/assets/food6.jpg",
     alt: "CHANGE ME"
   }
 ]
@@ -60,30 +60,19 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <div className={styles.header}>
-          <div className={styles.navbar}>
-            <Link href={"/catering"}><h1>Catering</h1></Link>
-            <Link href={"/menu"}>
-              <h1>View Menu</h1>
-            </Link>
-            <a target="_blank" href="https://www.crimson2go.com/r/927/restaurants/delivery/Mexican/Antojitos-Izcalli-tuscaloosa">
-              <h1>Crimson2Go</h1>
-            </a>
-            <a target="_blank" href="https://www.doordash.com/store/antojitos-izcalli-tuscaloosa-633289/?pickup=true&utm_campaign=gpa">
-              <h1>DoorDash</h1>
-            </a>
-          </div>
-          <div className={styles.title}><h1>Antojitos Izcalli</h1></div>
-          <h2>100% authentic Mexican Cusisine</h2>
-          <h2>(205) 331-4226</h2>
-        </div>
         <div className={styles.body}>
-          <div className={styles.imageWrapper}>
-            <Image
-              src="/assets/building1.jpg"
-              fill="true"
-            />
+          <div className={styles.header}>
+            <div className={styles.title}><h1>Antojitos Izcalli</h1></div>
+              <h2>100% Authentic Mexican Cusisine</h2>
+              <h2>(205) 331-4226</h2>
           </div>
+            <div className={styles.imageWrapper}>
+              <Image
+                src="/assets/building1.jpg"
+                fill="true"
+              />
+             </div>
+        
           <div className={styles.boxWrapper}>
             <div className={styles.box}>
               <h2>623 Hargrove RD E, Tuscalooa AL, 35401</h2>
@@ -123,10 +112,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-
-      <footer >
-         {/* make footer component */}
-      </footer>
     </div>
   )
 }
