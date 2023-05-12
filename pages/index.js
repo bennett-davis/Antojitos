@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.scss'
 import Link from 'next/link'
 import ReviewBox from '../components/ReivewBox'
 import React from 'react'
- import GalleryImage from '../components/GalleryImage'
+import GalleryImage from '../components/GalleryImage'
  
 
 const reviewList  = [

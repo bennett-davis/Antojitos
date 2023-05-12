@@ -1,9 +1,9 @@
-
+import styles from '../styles/catering.module.scss'
 
 export default function Catering (){
     return (
-        <div>
-            <h1>Hello big chungus</h1>
+        <div className={styles.main}>
+            <h1>Please Contact Us Directly For Catering</h1>
         </div>
     )
 }
