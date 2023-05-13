@@ -70,6 +70,7 @@ export default function Home() {
               <Image
                 src="/assets/building1.jpg"
                 fill="true"
+                alt="todo"
               />
              </div>
         
@@ -97,6 +98,7 @@ export default function Home() {
                 src={"/assets/fb.png"}
                 width={100}
                 height={100}
+                alt="todo"
               />
             </a>
             <a target = "_blank" href="https://instagram.com/antojitosizcalli?igshid=YmMyMTA2M2Y=">
@@ -104,6 +106,7 @@ export default function Home() {
                 src={"/assets/insta.jpg"}
                 width={100}
                 height={100}
+                alt="todo"
               />
             </a>
           </div>

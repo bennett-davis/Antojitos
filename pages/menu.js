@@ -8,24 +8,28 @@ export default function Menu () {
                 <Image 
                     src={"/assets/menu1.jpg"}
                     fill="true"
+                    alt="todo"
                 />
             </div>
             <div className={styles.imageWrapper}>
                 <Image 
                     src={"/assets/menu2.jpg"}
                     fill="true"
+                    alt="todo"
                 />
             </div>
             <div className={styles.imageWrapper}>
                 <Image 
                     src={"/assets/menu3.jpg"}
                     fill="true"
+                    alt="todo"
                 />
             </div>
             <div className={styles.imageWrapper}>
                 <Image 
                     src={"/assets/menu4.jpg"}
                     fill="true"
+                    alt="todo"
                 />
             </div>
             
