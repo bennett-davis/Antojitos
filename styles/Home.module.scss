@@ -1,0 +1,240 @@
+@use 'colors';
+
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: 'Galindo', cursive;
+  background-color: colors.$background-gray;
+}
+
+.navbarActive {
+  color: white;
+}
+
+.main h1, .main h2 {
+  text-align: center;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+  background-color: colors.$primary-color;
+
+}
+
+.navbar {
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: colors.$primary-color;
+
+}
+
+.navbar h1 {
+  margin: 2rem;
+  text-decoration: underline;
+}
+
+.navbar h1:hover {
+  color: white;
+  text-decoration-color: white;
+  cursor: pointer;
+}
+
+.title {
+  font-size: xx-large;
+}
+
+.header h2 {
+  margin: .5rem;
+}
+
+.imageWrapper {
+  margin: 3rem;
+  position: relative;
+  width: 80vw;
+  height: 35vw;
+  display: flex;
+  justify-content: center;
+}
+
+.boxWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: colors.$primary-color;
+  width: 45vw;
+  height: 50vh;
+  border-radius: 20px;
+}
+
+.boxImageWrapper {
+  border-radius: 10px;
+  padding: 1rem;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+.box h2 {
+  margin: 1rem 0 0 0;
+  text-align: center;
+}
+
+.map {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+
+.image {
+  border-radius: 10px;
+}
+
+.reviews {
+  background-color: colors.$background-gray;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  padding: 1rem 1rem;
+  overflow: auto ;
+}
+
+.reviews p {
+  margin: 0;
+  
+}
+
+.reviewTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  height: 30px;
+}
+
+.stars {
+  margin: 0 1rem;
+}
+
+.reviewTitle span {
+  color: colors.$primary-color;
+}
+
+.socialMedia {
+  flex-direction: row;
+  margin: 3rem;
+}
+
+.gallery {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+
+}
+
+.galleryImageWrapper {
+  position: relative;
+  border-radius: 10px;
+  margin: 1rem;
+  width: 40vw;
+  height: 35vw;
+  display: flex;
+  justify-content: center;
+}
+
+.mediaImage {
+  margin: 0 2rem
+}
+
+@media (max-width: 1200px){
+  .boxWrapper {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .box {
+    width: 85vw;
+  }
+  .navbar h1 {
+    margin: .7rem;
+  }
+}
+
+@media (max-width: 992px){
+  .navbar h1 {
+     font-size: 3vw;
+     margin: .7rem;
+  }
+}
+
+@media (max-width: 768px){
+  .imageWrapper {
+    width: 90vw;
+    height: 45vw
+  }
+  .gallery, .boxWrapper {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .galleryImageWrapper {
+    width: 500px; 
+    height: 500px;
+  }
+  
+}
+
+@media (max-width: 576px){
+  .galleryImageWrapper {
+    width: 400px; 
+    height: 400px;
+  }
+  .box {
+    font-size: small;
+  }
+  .socialMedia{
+    margin: 2rem 1rem
+  }
+  .navbar h1 {
+    margin: .5rem;
+  }
+}
+
+@media (max-width: 400px){
+  .galleryImageWrapper {
+    width: 300px; 
+    height: 300px;
+  }
+  .box {
+    font-size: small;
+  }
+}

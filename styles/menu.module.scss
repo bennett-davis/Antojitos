@@ -1,0 +1,23 @@
+@use 'colors';
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: colors.$background-gray;
+}
+
+.imageWrapper {
+    margin: .5rem;
+    position: relative;
+    width: 1150px;
+    height: 1530px;
+}
+
+@media (max-width:1250px) {
+    .imageWrapper {
+        width: 95vw;
+        height: 126.4vw;
+    }
+}
