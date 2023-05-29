@@ -8,9 +8,8 @@ function MyApp({ Component, pageProps }) {
     <div>
       <Head>  
         <style> @import url(&quot;https://fonts.googleapis.com/css2?family=Galindo&display=swap&quot;);</style>
-        {/* FIXME <link rel="icon" href="/favicon.ico" /> */}
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=optional:opsz,wght,FILL,GRAD@48,400,1,0" />      
-        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />        {/* FIXME <link rel="icon" href="/favicon.ico" /> */}
+         
       </Head>
       <Navbar/>
       <Component {...pageProps} />

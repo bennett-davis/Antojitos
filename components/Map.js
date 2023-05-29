@@ -15,7 +15,7 @@ const Map = () => {
 
   return (
     <LoadScript
-      googleMapsApiKey={"AIzaSyBhibmawkxlfwNZNZ99xlt0spS808K3ya8"}
+      googleMapsApiKey={process.env.local.GOOGLE_MAPS_API_KEY}
     >
       <GoogleMap
         mapContainerStyle={mapStyles}

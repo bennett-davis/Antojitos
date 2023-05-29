@@ -24,29 +24,58 @@ const reviewList  = [
 
 const galleryList = [
   {
-    imgSrc: "/assets/food1.jpg",
-    alt: "CHANGE ME"
+    imgSrc: "/assets/Carne_Asada.png",
+    alt: "Carne Asada"
   },
   {
-    imgSrc: "/assets/food2.jpg",
-    alt: "CHANGE ME"
+    imgSrc: "/assets/Burritos.png",
+    alt: "Burritos"
   },
   {
-    imgSrc: "/assets/food3.jpg",
-    alt: "CHANGE ME"
+    imgSrc: "/assets/Elote.png",
+    alt: "Elote"
   },
   {
-    imgSrc: "/assets/food4.jpg",
-    alt: "CHANGE ME"
+    imgSrc: "/assets/Fresas.png",
+    alt: "Fresas"
   },
   {
-    imgSrc: "/assets/food5.jpg",
-    alt: "CHANGE ME"
+    imgSrc: "/assets/Gorditas.png",
+    alt: "Gorditas"
   },
   {
-    imgSrc: "/assets/food6.jpg",
-    alt: "CHANGE ME"
-  }
+    imgSrc: "/assets/Huaraches.png",
+    alt: "Huaraches"
+  },
+  {
+    imgSrc: "/assets/Huevos.png",
+    alt: "Huevos"
+  },
+  {
+    imgSrc: "/assets/Menudo.png",
+    alt: "Menudo"
+  },
+  {
+    imgSrc: "/assets/Pambaso.png",
+    alt: "Pambaso"
+  },
+  {
+    imgSrc: "/assets/Pechuga_a_la_plancha.png",
+    alt: "Pechuga A La Plancha"
+  },
+  {
+    imgSrc: "/assets/Sopes.png",
+    alt: "Sopes"
+  },
+  {
+    imgSrc: "/assets/Tacos.png",
+    alt: "Tacos"
+  },
+  {
+    imgSrc: "/assets/Torta_Cubana.png",
+    alt: "Torta Cubana"
+  },
+
 ]
 
 
