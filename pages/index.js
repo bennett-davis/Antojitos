@@ -108,7 +108,7 @@ export default function Home() {
               <h2>623 Hargrove RD E, Tuscalooa AL, 35401</h2>
               <div className={styles.boxImageWrapper}>
                 <iframe className={styles.map} loading="lazy" allowFullScreen 
-                  src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ-x8UAs2piIgR_BEpALX8XU4&key=${process.env.GOOGLE_MAPS_API_KEY}`}>
+                  src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ-x8UAs2piIgR_BEpALX8XU4&key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`}>
                 </iframe>
               </div>
             </div>
