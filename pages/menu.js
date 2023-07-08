@@ -6,33 +6,29 @@ export default function Menu () {
         <div className={styles.main}>
         <div className={styles.imageWrapper}>
                 <Image 
-                    src={"/assets/menu1.jpg"}
+                    src={"/assets/menu1lr.jpg"}
                     fill="true"
-                    quality={20}
                     alt="First page of Antojitos Izcalli menu with logo and address."
                 />
             </div>
             <div className={styles.imageWrapper}>
                 <Image 
-                    src={"/assets/menu2.jpg"}
+                    src={"/assets/menu2lr.jpg"}
                     fill="true"
-                    quality={20}
                     alt="Second page of Antojitos Izcalli menu with Especialidades de la casa, Caldos, Plato de huevo, Daily Specials."
                 />
             </div>
             <div className={styles.imageWrapper}>
                 <Image 
-                    src={"/assets/menu3.jpg"}
+                    src={"/assets/menu3lr.jpg"}
                     fill="true"
-                    quality={20}
                     alt="Third page of Antojitos Izcalli menu with different menu items."
                 />
             </div>
             <div className={styles.imageWrapper}>
                 <Image 
-                    src={"/assets/menu4.jpg"}
+                    src={"/assets/menu4lr.jpg"}
                     fill="true"
-                    quality={20}
                     alt="Fourth page of Antojitos Izcalli menu with Kids, Extra, Dessert, and Drink options."
                 />
             </div>
