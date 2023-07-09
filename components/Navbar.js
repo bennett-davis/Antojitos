@@ -10,7 +10,7 @@ return (
 
   <div className={styles.navbar}>
     <Link href={"/"}><h1 className={router.pathname === '/'  ? styles.navbarActive : ''} >Home</h1></Link>
-      {/* <Link href={"/catering"}><h1 className={router.pathname === '/catering'  ? styles.navbarActive : ''} >Catering</h1></Link> */}
+      <Link href={"/catering"}><h1 className={router.pathname === '/catering'  ? styles.navbarActive : ''} >Catering</h1></Link>
       <Link href={"/menu"}>
         <h1 className={router.pathname === '/menu'  ? styles.navbarActive : ''} >Menu</h1>
       </Link>
