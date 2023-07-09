@@ -99,7 +99,7 @@ export default function Home() {
               <Image
                 src="/assets/building1.jpg"
                 fill="true"
-                alt="todo"
+                alt="The front of the Antojitos Izcalli building."
               />
              </div>
         
@@ -108,7 +108,7 @@ export default function Home() {
               <h2>623 Hargrove RD E, Tuscalooa AL, 35401</h2>
               <div className={styles.boxImageWrapper}>
                 <iframe className={styles.map} loading="lazy" allowFullScreen 
-                  src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ-x8UAs2piIgR_BEpALX8XU4&key=${process.env.GOOGLE_MAPS_API_KEY}`}>
+                  src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ-x8UAs2piIgR_BEpALX8XU4&key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`}>
                 </iframe>
               </div>
             </div>
@@ -127,7 +127,7 @@ export default function Home() {
                 src={"/assets/fb.png"}
                 width={100}
                 height={100}
-                alt="todo"
+                alt="Facebook logo that links to Facebook."
               />
             </a>
             <a target = "_blank" href="https://instagram.com/antojitosizcalli?igshid=YmMyMTA2M2Y=">
@@ -135,7 +135,7 @@ export default function Home() {
                 src={"/assets/insta.jpg"}
                 width={100}
                 height={100}
-                alt="todo"
+                alt="Instagram logo that links to Antojitos Instagram."
               />
             </a>
           </div>

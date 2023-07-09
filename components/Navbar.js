@@ -10,9 +10,9 @@ return (
 
   <div className={styles.navbar}>
     <Link href={"/"}><h1 className={router.pathname === '/'  ? styles.navbarActive : ''} >Home</h1></Link>
-      <Link href={"/catering"}><h1 className={router.pathname === '/catering'  ? styles.navbarActive : ''} >Catering</h1></Link>
+      {/* <Link href={"/catering"}><h1 className={router.pathname === '/catering'  ? styles.navbarActive : ''} >Catering</h1></Link> */}
       <Link href={"/menu"}>
-        <h1 className={router.pathname === '/menu'  ? styles.navbarActive : ''} >View Menu</h1>
+        <h1 className={router.pathname === '/menu'  ? styles.navbarActive : ''} >Menu</h1>
       </Link>
       <a target="_blank" href="https://www.crimson2go.com/r/927/restaurants/delivery/Mexican/Antojitos-Izcalli-tuscaloosa">
         <h1 >Crimson2Go</h1>
