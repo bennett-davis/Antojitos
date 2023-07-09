@@ -8,32 +8,65 @@ const twoWeeksFromToday = addDays(Date.now(), 14);
 
 export default function Catering (){
     const [minRequestDate, setMinRequestDate] = useState(format(twoWeeksFromToday, "yyyy-MM-dd"));
-    return (
-        <div className={styles.main}>
-            <h1 className={styles.header}>Submit a Catering Inquiry</h1>
-            <h3 className={styles.subheader}>All catering inquiries must be made at least two weeks in advance.</h3>
-            <Form className={styles.form} action="/api/email" method="post">
-                <Label for="name" className={styles.label}>Name</Label>
-                <Input id="name" name="name" type="text" required className={styles.input}/>
+    const [isSubmitted, setIsSubmitted] = useState(false);
 
-                <Label for="email" className={styles.label}>Email Address</Label>
-                <Input id="email" name="email" type="email" required className={styles.input}/>
+    const submitCatering = async (event) => {
+        event.preventDefault();
+        const res = await fetch("/api/email", {
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: event.target.name.value,
+                email: event.target.email.value,
+                phone: event.target.phone.value,
+                eventDate: event.target.eventDate.value,
+                eventType: event.target.eventType.value,
+                cateringNeeds: event.target.cateringNeeds.value
+            })
+        });
+        if (res.status === 200) {
+            setIsSubmitted(true);
+        }
+    };
 
-                <Label for="phone" className={styles.label}>Phone Number</Label>
-                <Input id="phone" name="phone" type="tel" required className={styles.input}/>
+    if (!isSubmitted) {
+        return (
+            <div className={styles.main}>
+                <h1 className={styles.header}>Submit a Catering Inquiry</h1>
+                <h3 className={styles.subheader}>All catering inquiries must be made at least two weeks in advance.</h3>
+                <Form className={styles.form} onSubmit={submitCatering} method="post">
+                    <Label for="name" className={styles.label}>Name</Label>
+                    <Input id="name" name="name" type="text" required className={styles.input}/>
 
-                <Label for="eventDate" className={styles.label}>Event Date</Label>
-                <Input id="eventDate" name="eventDate" type="date" required min={minRequestDate} className={styles.input}/>
+                    <Label for="email" className={styles.label}>Email Address</Label>
+                    <Input id="email" name="email" type="email" required className={styles.input}/>
 
-                <Label for="eventType" className={styles.label}>Event Type</Label>
-                <Input id="eventType" name="eventType" type="text" required className={styles.input}/>
+                    <Label for="phone" className={styles.label}>Phone Number</Label>
+                    <Input id="phone" name="phone" type="tel" required className={styles.input}/>
 
-                <Label for="cateringNeeds" className={styles.labelGroup}>Please describe the catering needs for your event in as much detail as possible:</Label>
-                <Label for="cateringNeeds" className={styles.label}>Catering Needs / Additional Information</Label>
-                <Input id="cateringNeeds" name="cateringNeeds" type="textarea" required rows="10" className={styles.input}/>
+                    <Label for="eventDate" className={styles.label}>Event Date</Label>
+                    <Input id="eventDate" name="eventDate" type="date" required min={minRequestDate} className={styles.input}/>
 
-                <Button type="submit" className={styles.button}>Submit</Button>
-            </Form>
-        </div>
-    )
+                    <Label for="eventType" className={styles.label}>Event Type</Label>
+                    <Input id="eventType" name="eventType" type="text" required className={styles.input}/>
+
+                    <Label for="cateringNeeds" className={styles.labelGroup}>Please describe the catering needs for your event in as much detail as possible:</Label>
+                    <Label for="cateringNeeds" className={styles.label}>Catering Needs / Additional Information</Label>
+                    <Input id="cateringNeeds" name="cateringNeeds" type="textarea" required rows="10" className={styles.input}/>
+
+                    <Button type="submit" className={styles.button}>Submit</Button>
+                </Form>
+            </div>
+        );
+    }
+    else {
+        return (
+            <div className={styles.main}>
+                <h1>Catering Inquiry Submitted!</h1>
+            </div>
+        );
+    }
 }

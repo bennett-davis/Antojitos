@@ -18,4 +18,7 @@ export default async function SendEmail(req, res) {
         subject: process.env.EMAIL_SUBJECT,
         html: emailTemplate
     });
+
+    res.status(200);
+    res.end();
 }
