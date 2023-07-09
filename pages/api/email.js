@@ -1,13 +1,17 @@
-import sendgrid from "@sendgrid/mail"
+import sendgrid from "@sendgrid/mail";
+import CateringEmailTemplate from "../../public/assets/catering-email-template";
 
 sendgrid.setApiKey(process.env.SEND_GRID_API_KEY);
 
-const emailTemplate = `
-    <h1>New catering request</h1>
-`;
+export default async function SendEmail(req, res) {
+    let emailTemplate = CateringEmailTemplate;
+    emailTemplate = emailTemplate.replace("%NAME%", req.body.name);
+    emailTemplate = emailTemplate.replace("%EMAIL_ADDRESS%", req.body.email);
+    emailTemplate = emailTemplate.replace("%PHONE_NUMBER%", req.body.phone);
+    emailTemplate = emailTemplate.replace("%EVENT_DATE%", req.body.eventDate);
+    emailTemplate = emailTemplate.replace("%EVENT_TYPE%", req.body.eventType);
+    emailTemplate = emailTemplate.replace("%CATERING_NEEDS%", req.body.cateringNeeds);
 
-export default async function SendEmail() {
-    console.log(process.env.SEND_GRID_API_KEY);
     await sendgrid.send({
         to: process.env.EMAIL_TO_ADDRESS,
         from: process.env.EMAIL_FROM_ADDRESS,

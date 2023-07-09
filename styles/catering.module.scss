@@ -1,13 +1,69 @@
 @use 'colors';
 
 .main {
-    width: 100vw;
-    min-height: 100vh;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    font-family: 'Galindo', cursive;
-    background-color: colors.$background-gray;
-  }
+  width: 100vw;
+  min-height: 100vh;
+  font-family: 'Galindo', cursive;
+  background-color: colors.$background-gray;
+  padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header {
+  margin: unset;
+  text-decoration: underline;
+  text-align: center;
+  margin-top: 16px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.subheader {
+  margin: unset;
+  text-align: center;
+  font-style: italic;
+  margin-top: 16px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.form {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+.label {
+  margin-top: 8px;
+}
+
+.labelGroup {
+  font-style: italic;
+  margin-top: 24px;
+  margin-bottom: 8px;
+  text-align: start;
+}
+
+.input {
+  padding: 6px;
+  border-radius: 0.35rem;
+}
+
+.button {
+  background-color: colors.$primary-color;
+  width: fit-content;
+  padding: 8px 24px;
+  border-radius: 0.35rem;
+  margin-left: auto;
+  margin-top: 24px;
+  font-size: 18px;
+  font-weight: 800;
+  cursor: pointer;
+}
